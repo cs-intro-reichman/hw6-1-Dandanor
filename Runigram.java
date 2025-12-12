@@ -131,12 +131,13 @@ public class Runigram {
 	 * Returns an image which is the grayscaled version of the given image.
 	 */
 	public static Color[][] grayScaled(Color[][] image) {
+		Color[][] arr = new Color[image.length][image[0].length];
 		for (int i=0;i<image.length;i++){
 			for(int j=0;j<image[i].length;j++){
-				image[i][j]=luminance(image[i][j]);
+				arr[i][j]=luminance(image[i][j]);
 			}
 		}
-		return null;
+		return arr;
 	}	
 	
 	/**
